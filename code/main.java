@@ -1,8 +1,12 @@
 import java.util.Scanner;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int lignes;
         int colones;
         String key;
@@ -20,9 +24,14 @@ public class Main {
         a.lignes(lignes);
         a.colones(colones);
 
+        //Enter data using BufferReader
+        //BufferedReader readerc = new BufferedReader(new InputStreamReader(System.in));
+
         while (true){
             key = reader.next();
-            a.position(key);
+            if(key!=null)
+               a.position(key);
+            key=null;
         }
 
     }
