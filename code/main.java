@@ -12,27 +12,22 @@ public class Main {
         String key;
 
         Scanner reader = new Scanner(System.in);
-
         curseur a = new curseur();
-
+        
         System.out.println("Nombre de lighnes? ");
         lignes = reader.nextInt();
-
         System.out.println("Nombre de colones? ");
         colones = reader.nextInt();
-
+        
         a.lignes(lignes);
         a.colones(colones);
-
-        //Enter data using BufferReader
-        //BufferedReader readerc = new BufferedReader(new InputStreamReader(System.in));
-
+        
         while (true){
             key = reader.next();
             if(key!=null)
                a.position(key);
             key=null;
         }
-
+        
     }
 }
